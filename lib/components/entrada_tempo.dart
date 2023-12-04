@@ -30,7 +30,7 @@ class EntradaTempo extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 padding: const EdgeInsets.all(15),
-                backgroundColor: Colors.deepPurple,
+                backgroundColor: Theme.of(context).primaryColor,
               ),
               child: const Icon(
                 Icons.arrow_downward,
@@ -48,7 +48,7 @@ class EntradaTempo extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
                 padding: const EdgeInsets.all(15),
-                backgroundColor: Colors.deepPurple,
+                backgroundColor: Theme.of(context).primaryColor,
               ),
               child: const Icon(
                 Icons.arrow_upward,
