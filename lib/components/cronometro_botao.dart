@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pomodoro/store/pomodoro.store.dart';
+import 'package:provider/provider.dart';
 
 class CronometroBotao extends StatelessWidget {
   final String texto;
@@ -14,6 +16,8 @@ class CronometroBotao extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final store = Provider.of<PomodoroStore>(context);
+
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.symmetric(
@@ -32,13 +36,15 @@ class CronometroBotao extends StatelessWidget {
             child: Icon(
               icone,
               size: 25,
+              color: store.estaTrabalhando() ? Theme.of(context).primaryColor : const Color.fromARGB(255, 24, 179, 29),
             ),
           ),
           Text(
             texto,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
+              color: store.estaTrabalhando() ? Theme.of(context).primaryColor : const Color.fromARGB(255, 24, 179, 29),
             ),
           ),
         ],

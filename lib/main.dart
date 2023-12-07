@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
-          primaryColor: Colors.deepPurple,
+          primaryColor: const Color.fromARGB(255, 218, 38, 25),
         ),
         home: const Pomodoro(),
         debugShowCheckedModeBanner: false,
