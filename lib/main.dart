@@ -19,9 +19,7 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
         theme: ThemeData(
-          //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           primaryColor: const Color.fromARGB(255, 218, 38, 25),
         ),
@@ -31,39 +29,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// import 'package:flutter_mobx/flutter_mobx.dart';
-// import './store/contador.store.dart';
-// final store = ContadorStore();
-
-// class HomePage extends StatelessWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Contador'),
-//       ),
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             const Text('You have pushed the button this many times:'),
-//             Observer(
-//               builder: (_) => Text(
-//                 '${store.contador}',
-//                 style: Theme.of(context).textTheme.headlineMedium,
-//               ),
-//             )
-//           ],
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: store.incrementar,
-//         tooltip: 'Increment',
-//         child: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }

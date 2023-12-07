@@ -1,0 +1,12 @@
+## quando for gerar o código para mobx, ele irá procurar apenas os arquivos com extensão .store.dart dentro da pasta store
+
+## limitamos o espaço de busca por arquivos, consequentemente, diminuindo o tempo necessário
+
+# geração de código automática com o comando: flutter pub run build_runner watch
+
+targets:
+  $default:
+    builders:
+      mobx_codegen|mobx_generator:
+        generate_for:
+          - "lib/store/**.store.dart"
