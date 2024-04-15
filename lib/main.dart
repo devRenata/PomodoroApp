@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pomodoro/app/ui/screens/home_screen.dart';
+import 'package:pomodoro/app/controllers/timer_controller.dart';
+import 'package:pomodoro/app/views/home_page_pomodoro.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final TimerController controller = TimerController();
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomeScreen(),
-      theme: ThemeData(
-        primaryColor: const Color.fromARGB(255, 218, 38, 25),
-      ),
-      debugShowCheckedModeBanner: false,
+      home: HomePagePomodoro(controller: controller),
     );
   }
 }
